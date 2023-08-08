@@ -19,7 +19,7 @@ func main() {
 		fmt.Println("对不起，库存不足")
 	}
 	// 在go语言中，if后面可以并列加入变量的定义
-	if count1 := 20; count1 < 30 {
+	if count1 := 20; count1 < 30 { // 通常用于设置一个局部变量
 		fmt.Println("对不起，库存不足")
 	}
 
