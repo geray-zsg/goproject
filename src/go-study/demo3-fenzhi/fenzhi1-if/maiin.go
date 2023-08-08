@@ -15,7 +15,7 @@ import (
 func main() {
 	// 实现功能：如果口罩的库存小于30个，提示库存不足
 	var count int = 20
-	if count < 30 { //{}一定不能省略
+	if count < 30 { //{}一定不能省略，	并且{必须和if在同一行
 		fmt.Println("对不起，库存不足")
 	}
 	// 在go语言中，if后面可以并列加入变量的定义
