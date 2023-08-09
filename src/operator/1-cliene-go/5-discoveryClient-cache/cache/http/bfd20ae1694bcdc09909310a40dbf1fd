@@ -1,0 +1,7 @@
+HTTP/2.0 200 OK
+Content-Length: 389
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Wed, 09 Aug 2023 13:15:04 GMT
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"scheduling.kubefed.io/v1alpha1","resources":[{"name":"replicaschedulingpreferences","singularName":"replicaschedulingpreference","namespaced":true,"kind":"ReplicaSchedulingPreference","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["rsp"],"storageVersionHash":"f8MReFBkrMk="}]}

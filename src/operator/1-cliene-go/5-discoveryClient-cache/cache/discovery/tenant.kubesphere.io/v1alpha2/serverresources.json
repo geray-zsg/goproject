@@ -1,0 +1,1 @@
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"tenant.kubesphere.io/v1alpha2","resources":[{"name":"workspacetemplates","singularName":"workspacetemplate","namespaced":false,"kind":"WorkspaceTemplate","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["tenant"],"storageVersionHash":"2ip69xK3eA0="}]}

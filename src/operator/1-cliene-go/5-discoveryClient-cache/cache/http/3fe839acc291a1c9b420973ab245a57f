@@ -1,0 +1,7 @@
+HTTP/2.0 200 OK
+Content-Length: 428
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Wed, 09 Aug 2023 13:15:04 GMT
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"storage.kubesphere.io/v1alpha1","resources":[{"name":"accessors","singularName":"accessor","namespaced":false,"kind":"Accessor","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"HJX30UVL4gs="},{"name":"accessors/status","singularName":"","namespaced":false,"kind":"Accessor","verbs":["get","patch","update"]}]}

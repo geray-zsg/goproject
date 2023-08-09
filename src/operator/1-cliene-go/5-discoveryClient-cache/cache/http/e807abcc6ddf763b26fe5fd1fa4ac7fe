@@ -1,0 +1,7 @@
+HTTP/2.0 200 OK
+Content-Length: 536
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Wed, 09 Aug 2023 13:15:04 GMT
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"servicemesh.kubesphere.io/v1alpha2","resources":[{"name":"strategies","singularName":"strategy","namespaced":true,"kind":"Strategy","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"3iIwf0S/fRQ="},{"name":"servicepolicies","singularName":"servicepolicy","namespaced":true,"kind":"ServicePolicy","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"mIUCdOzCNhs="}]}

@@ -1,0 +1,7 @@
+HTTP/2.0 200 OK
+Content-Length: 1113
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Wed, 09 Aug 2023 13:15:04 GMT
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"core.kubefed.io/v1alpha1","resources":[{"name":"clusterpropagatedversions","singularName":"clusterpropagatedversion","namespaced":false,"kind":"ClusterPropagatedVersion","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"oaavl0bQc6M="},{"name":"clusterpropagatedversions/status","singularName":"","namespaced":false,"kind":"ClusterPropagatedVersion","verbs":["get","patch","update"]},{"name":"federatedservicestatuses","singularName":"federatedservicestatus","namespaced":true,"kind":"FederatedServiceStatus","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"i0Ki+ge8B0s="},{"name":"propagatedversions","singularName":"propagatedversion","namespaced":true,"kind":"PropagatedVersion","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"FsgG0hzaWBU="},{"name":"propagatedversions/status","singularName":"","namespaced":true,"kind":"PropagatedVersion","verbs":["get","patch","update"]}]}

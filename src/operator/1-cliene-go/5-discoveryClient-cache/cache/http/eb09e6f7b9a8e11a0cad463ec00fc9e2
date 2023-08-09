@@ -1,0 +1,7 @@
+HTTP/2.0 200 OK
+Content-Length: 369
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Wed, 09 Aug 2023 13:15:04 GMT
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"installer.kubesphere.io/v1alpha1","resources":[{"name":"clusterconfigurations","singularName":"clusterconfiguration","namespaced":true,"kind":"ClusterConfiguration","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["cc"],"storageVersionHash":"DpTDkRMSZ68="}]}

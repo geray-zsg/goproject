@@ -1,0 +1,7 @@
+HTTP/2.0 200 OK
+Content-Length: 474
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Wed, 09 Aug 2023 13:15:04 GMT
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"quota.kubesphere.io/v1alpha2","resources":[{"name":"resourcequotas","singularName":"resourcequota","namespaced":false,"kind":"ResourceQuota","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["quota"],"storageVersionHash":"LtBnbLELf8Q="},{"name":"resourcequotas/status","singularName":"","namespaced":false,"kind":"ResourceQuota","verbs":["get","patch","update"]}]}

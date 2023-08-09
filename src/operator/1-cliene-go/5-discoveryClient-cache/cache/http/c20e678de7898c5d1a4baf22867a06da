@@ -1,0 +1,7 @@
+HTTP/2.0 200 OK
+Content-Length: 362
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Wed, 09 Aug 2023 13:15:04 GMT
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"tenant.kubesphere.io/v1alpha2","resources":[{"name":"workspacetemplates","singularName":"workspacetemplate","namespaced":false,"kind":"WorkspaceTemplate","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["tenant"],"storageVersionHash":"2ip69xK3eA0="}]}

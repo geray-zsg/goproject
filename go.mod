@@ -10,7 +10,12 @@ require (
 
 require k8s.io/client-go v0.19.9
 
-require github.com/googleapis/gnostic v0.4.1 // indirect
+require (
+	github.com/google/btree v1.0.0 // indirect
+	github.com/googleapis/gnostic v0.4.1 // indirect
+	github.com/gregjones/httpcache v0.0.0-20180305231024-9cad4c3443a7 // indirect
+	github.com/peterbourgon/diskv v2.0.1+incompatible // indirect
+)
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect

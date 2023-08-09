@@ -1,0 +1,7 @@
+HTTP/2.0 200 OK
+Content-Length: 471
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Wed, 09 Aug 2023 13:15:04 GMT
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"app.k8s.io/v1beta1","resources":[{"name":"applications","singularName":"application","namespaced":true,"kind":"Application","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["app"],"categories":["all"],"storageVersionHash":"FG0AsOnFKxM="},{"name":"applications/status","singularName":"","namespaced":true,"kind":"Application","verbs":["get","patch","update"]}]}

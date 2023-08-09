@@ -1,0 +1,7 @@
+HTTP/2.0 200 OK
+Content-Length: 378
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Wed, 09 Aug 2023 13:15:04 GMT
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"monitoring.coreos.com/v1alpha1","resources":[{"name":"alertmanagerconfigs","singularName":"alertmanagerconfig","namespaced":true,"kind":"AlertmanagerConfig","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"categories":["prometheus-operator"],"storageVersionHash":"95DNJ6wsUCg="}]}

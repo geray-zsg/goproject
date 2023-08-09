@@ -1,0 +1,7 @@
+HTTP/2.0 200 OK
+Content-Length: 1063
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Wed, 09 Aug 2023 13:15:04 GMT
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"core.kubefed.io/v1beta1","resources":[{"name":"federatedtypeconfigs","singularName":"federatedtypeconfig","namespaced":true,"kind":"FederatedTypeConfig","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["ftc"],"storageVersionHash":"IC/zX4FP3Js="},{"name":"federatedtypeconfigs/status","singularName":"","namespaced":true,"kind":"FederatedTypeConfig","verbs":["get","patch","update"]},{"name":"kubefedconfigs","singularName":"kubefedconfig","namespaced":true,"kind":"KubeFedConfig","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"nPYhv1aEnAY="},{"name":"kubefedclusters","singularName":"kubefedcluster","namespaced":true,"kind":"KubeFedCluster","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"mBb9INOOu7w="},{"name":"kubefedclusters/status","singularName":"","namespaced":true,"kind":"KubeFedCluster","verbs":["get","patch","update"]}]}

@@ -1,0 +1,7 @@
+HTTP/2.0 200 OK
+Content-Length: 727
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Wed, 09 Aug 2023 13:15:04 GMT
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"gateway.kubesphere.io/v1alpha1","resources":[{"name":"nginxes","singularName":"nginx","namespaced":true,"kind":"Nginx","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"KhiLFT715YE="},{"name":"nginxes/status","singularName":"","namespaced":true,"kind":"Nginx","verbs":["get","patch","update"]},{"name":"gateways","singularName":"gateway","namespaced":true,"kind":"Gateway","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"0FsoIQMJPuA="},{"name":"gateways/status","singularName":"","namespaced":true,"kind":"Gateway","verbs":["get","patch","update"]}]}

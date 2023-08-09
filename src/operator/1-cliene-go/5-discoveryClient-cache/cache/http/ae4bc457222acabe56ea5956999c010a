@@ -1,0 +1,7 @@
+HTTP/2.0 200 OK
+Content-Length: 1134
+Cache-Control: no-cache, private
+Content-Type: application/json
+Date: Wed, 09 Aug 2023 13:15:04 GMT
+
+{"kind":"APIResourceList","apiVersion":"v1","groupVersion":"network.kubesphere.io/v1alpha1","resources":[{"name":"ipamblocks","singularName":"ipamblock","namespaced":false,"kind":"IPAMBlock","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"ptSrK20ijCU="},{"name":"namespacenetworkpolicies","singularName":"namespacenetworkpolicy","namespaced":true,"kind":"NamespaceNetworkPolicy","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"shortNames":["nsnp"],"categories":["networking"],"storageVersionHash":"sU7EyzURIEk="},{"name":"ippools","singularName":"ippool","namespaced":false,"kind":"IPPool","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"toSnkrwStQE="},{"name":"ippools/status","singularName":"","namespaced":false,"kind":"IPPool","verbs":["get","patch","update"]},{"name":"ipamhandles","singularName":"ipamhandle","namespaced":false,"kind":"IPAMHandle","verbs":["delete","deletecollection","get","list","patch","create","update","watch"],"storageVersionHash":"5m5y1G47fyA="}]}
