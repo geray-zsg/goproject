@@ -38,14 +38,20 @@ func generateSQL(fileReader string, fileWriter string, dex_url string) {
 	// fmt.Println(records)
 
 	// 获取电话号码并连接到字符串中
+	fmt.Println("循环csv文件内容，逐条数据加密")
 	for _, record := range records {
 		// 如果手机号码为空则退出本次循环
 		if record[2] == "" || record[2] == "phone" {
 			fmt.Println("user_id: " + record[0] + "  没有手机号信息，跳过...")
 			continue
 		}
-		// 对手机号码进行拼接加密
+		// 对手机号码进行拼接加密，由于文件中手机号在第三列所以这里使用索引为2
 		encryption_phone, _ := harbor.Marshal(&harbor.IDTokenSubject{ConnId: "cas", UserId: record[2]})
+		/*
+			这里如果要测试自己的账号单条数据不用csv文件则注释上一条和上面的判断语句
+			因为要循环文件不行啊，后面在调整代码吧，先使用csv文件：顺序以此如下
+			user_id	username phone email
+		*/
 		// encryption_phone, _ := harbor.Marshal(&harbor.IDTokenSubject{ConnId: "cas", UserId: "17339872165"})
 		fmt.Println(record[2])
 		fmt.Println(encryption_phone)
@@ -93,10 +99,11 @@ func main() {
 		writeFile := "output-" + harbor_name[i] + ".txt"
 		readerFile := "csvFile/harbor-" + harbor_name[i] + ".csv"
 
-		fmt.Println(writeFile)
-		fmt.Println(readerFile)
+		// fmt.Println(writeFile)
+		// fmt.Println(readerFile)
 
 		// 调用方法传入文件到生成sql的函数
+		fmt.Println("调用generateSQL函数加密并生成SQL，文件名为：", readerFile)
 		generateSQL(readerFile, writeFile, dex_url)
 	}
 
