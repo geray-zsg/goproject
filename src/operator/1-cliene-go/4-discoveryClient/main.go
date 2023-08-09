@@ -30,6 +30,8 @@ func main() {
 	}
 
 	// 3、发送请求，获取GVR数据
+	// ServerGroupsAndResources:负责获取GV数据，调用且传递GV参数
+	// 同时返回一个 map[gv]resourceList 的数据格式，最后处理map -> slice ，然后返回一个GVR slice
 	_, apiResources, err := discoveryClient.ServerGroupsAndResources()
 	if err != nil {
 		panic(err)
