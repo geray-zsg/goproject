@@ -33,6 +33,7 @@ func main() {
 	}
 
 	// 4、遍历列表获取值
+	fmt.Println(podList)
 	for _, item := range podList.Items {
 		fmt.Printf("namespace: %v, podName: %v \n", item.Namespace, item.Name)
 	}
