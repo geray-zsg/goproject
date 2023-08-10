@@ -12,8 +12,10 @@ require k8s.io/client-go v0.19.9
 
 require (
 	github.com/google/btree v1.0.0 // indirect
+	github.com/google/go-cmp v0.5.5 // indirect
 	github.com/googleapis/gnostic v0.4.1 // indirect
 	github.com/gregjones/httpcache v0.0.0-20180305231024-9cad4c3443a7 // indirect
+	github.com/hashicorp/golang-lru v0.5.1 // indirect
 	github.com/peterbourgon/diskv v2.0.1+incompatible // indirect
 )
 
