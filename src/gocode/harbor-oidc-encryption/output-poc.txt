@@ -1,1 +1,1 @@
-INSERT INTO oidc_user (user_id,secret,subiss) VALUES ('3','','CggxMjM0NTY3OBIDY2Fzhttps://10.27.33.121:32000');
+INSERT INTO oidc_user (user_id,secret,subiss) VALUES ('3','','CgsxNzMzOTg3MjE2NRIDY2Fzhttps://10.27.33.121:32000');
