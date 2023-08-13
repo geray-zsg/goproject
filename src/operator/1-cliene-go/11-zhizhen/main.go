@@ -26,7 +26,7 @@ func (p Person) testName() {
 	fmt.Println(p.Name)
 }
 
-func (p *Person) testAge() {
+func (p *Person) testAge() { // 这里定义了指针其他地方都可以简写（底层编译器会自动补全 * 或者 &）
 	// 这里传递结构体的指针，调用的时候需要传递地址，修改原来的值，原来的值将被修改
 	// (*p).Age = 20      // 这里也可以简写
 	p.Age = 23
