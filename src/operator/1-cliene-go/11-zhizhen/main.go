@@ -44,6 +44,6 @@ func main() {
 	// 由于testAge使用指针传递地址修改原数据，所以原数据被修改（两个输出值相同）
 	p.Age = 28
 	(&p).testAge()
-	fmt.Println(p.Age)
+	fmt.Printf("p的地址: %p, age值为： %v", &p, p.Age)
 
 }
