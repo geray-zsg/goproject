@@ -28,8 +28,9 @@ func (p Person) testName() {
 
 func (p *Person) testAge() {
 	// 这里传递结构体的指针，调用的时候需要传递地址，修改原来的值，原来的值将被修改
-	(*p).Age = 20
-	fmt.Println(p.Age)
+	// (*p).Age = 20      // 这里也可以简写
+	p.Age = 23
+	fmt.Println(p.Age) // 这里是简写：(*p).Age
 }
 
 func main() {
@@ -43,7 +44,8 @@ func main() {
 
 	// 由于testAge使用指针传递地址修改原数据，所以原数据被修改（两个输出值相同）
 	p.Age = 28
-	(&p).testAge()
+	// (&p).testAge()	// 这里也可以简写
+	p.testAge()
 	fmt.Printf("p的地址: %p, age值为： %v", &p, p.Age)
 
 }
