@@ -20,9 +20,10 @@ import (
 )
 
 // 编码
-func setEncodedURL(urlStr string) {
-	encodeURL := url.QueryEscape(urlStr)
-	fmt.Println("编码结果", encodeURL)
+func encodeURL(urlStr string) string {
+	encodedURL := url.QueryEscape(urlStr)
+	fmt.Println("编码结果", encodedURL)
+	return encodedURL
 }
 
 // 解码
@@ -40,7 +41,8 @@ func main() {
 	// 编码
 	// encodeURLStr := "http://ks.cloud.cmft:30880/oauth/redirect/cas"
 	encodeURLStr := "http://10.127.128.10:30880/oauth/redirect/cas"
-	setEncodedURL(encodeURLStr)
+	encodedURL := encodeURL(encodeURLStr)
+	fmt.Println("编码后的拼接结果：https://it.cmft/gateway/cas?service=" + encodedURL)
 
 	// URL
 	decodeURLStr := "https://it.cmft/gateway/cas?service=http%3A%2F%2F10.127.128.10%3A30880%2Foauth%2Fredirect%2Fcas"
