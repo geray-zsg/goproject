@@ -8,7 +8,10 @@ require (
 	google.golang.org/protobuf v1.31.0
 )
 
-require k8s.io/client-go v0.19.9
+require (
+	github.com/mozillazg/go-pinyin v0.20.0
+	k8s.io/client-go v0.19.9
+)
 
 require (
 	github.com/google/btree v1.0.0 // indirect
