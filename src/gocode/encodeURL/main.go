@@ -40,7 +40,8 @@ func main() {
 
 	// 编码
 	// encodeURLStr := "http://ks.cloud.cmft:30880/oauth/redirect/cas"
-	encodeURLStr := "http://10.127.128.10:30880/oauth/redirect/cas"
+	// encodeURLStr := "http://10.127.128.10:30880/oauth/redirect/cas"
+	encodeURLStr := "http://10.27.33.9:30880/oauth/redirect/cas"
 	encodedURL := encodeURL(encodeURLStr)
 	fmt.Println("编码后的拼接结果：https://it.cmft/gateway/cas?service=" + encodedURL)
 
