@@ -1,0 +1,903 @@
+{
+    "metadata": {
+        "name": "host-all-20231121-14-32-result",
+        "creationTimestamp": null,
+        "labels": {
+            "kubeeye.kubesphere.io/task-name": "all-20231121-14-32"
+        },
+        "annotations": {
+            "kubeeye.kubesphere.io/task-end-time": "2023-11-21 14:34:04",
+            "kubeeye.kubesphere.io/task-inspect-policy": "single",
+            "kubeeye.kubesphere.io/task-start-time": "2023-11-21 14:32:04"
+        },
+        "ownerReferences": [
+            {
+                "apiVersion": "kubeeye.kubesphere.io/v1alpha2",
+                "kind": "InspectTask",
+                "name": "all-20231121-14-32",
+                "uid": "35272e20-07eb-492e-b351-75aed98abd07",
+                "controller": true,
+                "blockOwnerDeletion": true
+            }
+        ]
+    },
+    "spec": {
+        "inspectCluster": {
+            "name": "host",
+            "provider": "kubesphere"
+        },
+        "inspectRuleTotal": {
+            "prometheus": 19,
+            "serviceconnect": 76
+        },
+        "prometheusResult": [
+            {
+                "name": "cluster_cpu_usage",
+                "assert": true,
+                "result": "{}"
+            },
+            {
+                "name": "cluster_cpu_total",
+                "assert": true,
+                "result": "{}"
+            },
+            {
+                "name": "cluster_memory_usage_wo_cache",
+                "assert": true,
+                "result": "{}"
+            },
+            {
+                "name": "cluster_memory_total",
+                "assert": true,
+                "result": "{}"
+            },
+            {
+                "name": "cluster_disk_size_usage",
+                "assert": true,
+                "result": "{}"
+            },
+            {
+                "name": "cluster_disk_size_capacity",
+                "assert": true,
+                "result": "{}"
+            },
+            {
+                "name": "cluster_pod_running_count",
+                "assert": true,
+                "result": "{}"
+            },
+            {
+                "name": "cluster_pod_quota",
+                "assert": true,
+                "result": "{}"
+            },
+            {
+                "name": "node_cpu_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.10\", \"metricName\"=\"node:node_cpu_utilisation:avg1m\", \"node\"=\"xpqcsyx27x33x10ten\", \"timestamp\"=\"1700548424.25\", \"value\"=\"0.2709791666672875\"}"
+            },
+            {
+                "name": "node_cpu_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.11\", \"metricName\"=\"node:node_cpu_utilisation:avg1m\", \"node\"=\"xpqcsyx27x33x11ten\", \"timestamp\"=\"1700548424.25\", \"value\"=\"0.6850416666634069\"}"
+            },
+            {
+                "name": "node_cpu_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.13\", \"metricName\"=\"node:node_cpu_utilisation:avg1m\", \"node\"=\"xpqcsyx27x33x13ten\", \"role\"=\"master\", \"timestamp\"=\"1700548424.25\", \"value\"=\"0.14687500000097015\"}"
+            },
+            {
+                "name": "node_cpu_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.15\", \"metricName\"=\"node:node_cpu_utilisation:avg1m\", \"node\"=\"xpqcsyx27x33x15ten\", \"role\"=\"master\", \"timestamp\"=\"1700548424.25\", \"value\"=\"0.14366666666658906\"}"
+            },
+            {
+                "name": "node_cpu_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.7\", \"metricName\"=\"node:node_cpu_utilisation:avg1m\", \"node\"=\"xpqcsyx27x33xx7ten\", \"timestamp\"=\"1700548424.25\", \"value\"=\"0.1734583333333376\"}"
+            },
+            {
+                "name": "node_cpu_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.8\", \"metricName\"=\"node:node_cpu_utilisation:avg1m\", \"node\"=\"xpqcsyx27x33xx8ten\", \"timestamp\"=\"1700548424.25\", \"value\"=\"0.18229166666642416\"}"
+            },
+            {
+                "name": "node_cpu_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.9\", \"metricName\"=\"node:node_cpu_utilisation:avg1m\", \"node\"=\"xpqcsyx27x33xx9ten\", \"role\"=\"master\", \"timestamp\"=\"1700548424.25\", \"value\"=\"0.424458333333799\"}"
+            },
+            {
+                "name": "node_memory_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.10\", \"metricName\"=\"node:node_memory_utilisation:\", \"node\"=\"xpqcsyx27x33x10ten\", \"timestamp\"=\"1700548424.251\", \"value\"=\"0.5651065114914045\"}"
+            },
+            {
+                "name": "node_memory_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.11\", \"metricName\"=\"node:node_memory_utilisation:\", \"node\"=\"xpqcsyx27x33x11ten\", \"timestamp\"=\"1700548424.251\", \"value\"=\"0.3962486189793376\"}"
+            },
+            {
+                "name": "node_memory_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.13\", \"metricName\"=\"node:node_memory_utilisation:\", \"node\"=\"xpqcsyx27x33x13ten\", \"role\"=\"master\", \"timestamp\"=\"1700548424.251\", \"value\"=\"0.5610640704809571\"}"
+            },
+            {
+                "name": "node_memory_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.15\", \"metricName\"=\"node:node_memory_utilisation:\", \"node\"=\"xpqcsyx27x33x15ten\", \"role\"=\"master\", \"timestamp\"=\"1700548424.251\", \"value\"=\"0.5789668800227232\"}"
+            },
+            {
+                "name": "node_memory_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.7\", \"metricName\"=\"node:node_memory_utilisation:\", \"node\"=\"xpqcsyx27x33xx7ten\", \"timestamp\"=\"1700548424.251\", \"value\"=\"0.37705542884072774\"}"
+            },
+            {
+                "name": "node_memory_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.8\", \"metricName\"=\"node:node_memory_utilisation:\", \"node\"=\"xpqcsyx27x33xx8ten\", \"timestamp\"=\"1700548424.251\", \"value\"=\"0.45742596924665635\"}"
+            },
+            {
+                "name": "node_memory_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.9\", \"metricName\"=\"node:node_memory_utilisation:\", \"node\"=\"xpqcsyx27x33xx9ten\", \"role\"=\"master\", \"timestamp\"=\"1700548424.251\", \"value\"=\"0.4032972104742084\"}"
+            },
+            {
+                "name": "node_disk_size_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.10\", \"metricName\"=\"node:disk_space_utilization:ratio\", \"node\"=\"xpqcsyx27x33x10ten\", \"timestamp\"=\"1700548424.253\", \"value\"=\"0.34544894372622026\"}"
+            },
+            {
+                "name": "node_disk_size_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.11\", \"metricName\"=\"node:disk_space_utilization:ratio\", \"node\"=\"xpqcsyx27x33x11ten\", \"timestamp\"=\"1700548424.253\", \"value\"=\"0.6683269998368939\"}"
+            },
+            {
+                "name": "node_disk_size_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.13\", \"metricName\"=\"node:disk_space_utilization:ratio\", \"node\"=\"xpqcsyx27x33x13ten\", \"role\"=\"master\", \"timestamp\"=\"1700548424.253\", \"value\"=\"0.17532063341900672\"}"
+            },
+            {
+                "name": "node_disk_size_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.15\", \"metricName\"=\"node:disk_space_utilization:ratio\", \"node\"=\"xpqcsyx27x33x15ten\", \"role\"=\"master\", \"timestamp\"=\"1700548424.253\", \"value\"=\"0.18124434583194027\"}"
+            },
+            {
+                "name": "node_disk_size_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.7\", \"metricName\"=\"node:disk_space_utilization:ratio\", \"node\"=\"xpqcsyx27x33xx7ten\", \"timestamp\"=\"1700548424.253\", \"value\"=\"0.3150518101283455\"}"
+            },
+            {
+                "name": "node_disk_size_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.8\", \"metricName\"=\"node:disk_space_utilization:ratio\", \"node\"=\"xpqcsyx27x33xx8ten\", \"timestamp\"=\"1700548424.253\", \"value\"=\"0.5523389161586489\"}"
+            },
+            {
+                "name": "node_disk_size_utilisation",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.9\", \"metricName\"=\"node:disk_space_utilization:ratio\", \"node\"=\"xpqcsyx27x33xx9ten\", \"role\"=\"master\", \"timestamp\"=\"1700548424.253\", \"value\"=\"0.4695718860775042\"}"
+            },
+            {
+                "name": "node_load_15",
+                "assert": true,
+                "result": "{\"host_ip\"=\"10.27.33.11\", \"metricName\"=\"node:load15:ratio\", \"node\"=\"xpqcsyx27x33x11ten\", \"timestamp\"=\"1700548424.255\", \"value\"=\"1.985\"}"
+            },
+            {
+                "name": "apiserver_request_latencies",
+                "assert": true,
+                "result": "apiserver:apiserver_request_duration:avg"
+            },
+            {
+                "name": "apiserver_request_rate",
+                "assert": true,
+                "result": "apiserver:apiserver_request_total:sum_irate"
+            }
+        ],
+        "opaResult": {
+            "scoreInfo": {},
+            "extraInfo": {}
+        },
+        "componentResult": [
+            {
+                "name": "ks-apiserver"
+            },
+            {
+                "name": "ks-apiserver"
+            },
+            {
+                "name": "ks-apiserver"
+            },
+            {
+                "name": "ks-apiservernodeport"
+            },
+            {
+                "name": "ks-apiservernodeport"
+            },
+            {
+                "name": "ks-apiservernodeport"
+            },
+            {
+                "name": "ks-console"
+            },
+            {
+                "name": "ks-console"
+            },
+            {
+                "name": "ks-console"
+            },
+            {
+                "name": "ks-controller-manager"
+            },
+            {
+                "name": "ks-controller-manager"
+            },
+            {
+                "name": "ks-controller-manager"
+            },
+            {
+                "name": "minio"
+            },
+            {
+                "name": "openldap"
+            },
+            {
+                "name": "redis"
+            },
+            {
+                "name": "tower"
+            },
+            {
+                "name": "elasticsearch-logging-data"
+            },
+            {
+                "name": "elasticsearch-logging-data"
+            },
+            {
+                "name": "elasticsearch-logging-data"
+            },
+            {
+                "name": "elasticsearch-logging-discovery"
+            },
+            {
+                "name": "elasticsearch-logging-discovery"
+            },
+            {
+                "name": "elasticsearch-logging-discovery"
+            },
+            {
+                "name": "ks-events-admission"
+            },
+            {
+                "name": "ks-events-ruler"
+            },
+            {
+                "name": "ks-events-ruler"
+            },
+            {
+                "name": "ks-vector"
+            },
+            {
+                "name": "ks-vector"
+            },
+            {
+                "name": "ks-vector"
+            },
+            {
+                "name": "ks-vector"
+            },
+            {
+                "name": "ks-vector"
+            },
+            {
+                "name": "ks-vector-headless"
+            },
+            {
+                "name": "ks-vector-headless"
+            },
+            {
+                "name": "ks-vector-headless"
+            },
+            {
+                "name": "ks-vector-headless"
+            },
+            {
+                "name": "ks-vector-headless"
+            },
+            {
+                "name": "kube-auditing-webhook-svc"
+            },
+            {
+                "name": "kube-auditing-webhook-svc"
+            },
+            {
+                "name": "logsidecar-injector-admission"
+            },
+            {
+                "name": "logsidecar-injector-admission"
+            },
+            {
+                "name": "alertmanager-main"
+            },
+            {
+                "name": "alertmanager-main"
+            },
+            {
+                "name": "alertmanager-main"
+            },
+            {
+                "name": "alertmanager-operated"
+            },
+            {
+                "name": "alertmanager-operated"
+            },
+            {
+                "name": "alertmanager-operated"
+            },
+            {
+                "name": "gateway-whizard-operated"
+            },
+            {
+                "name": "gateway-whizard-operated"
+            },
+            {
+                "name": "ingester-whizard-local-auto-0-operated"
+            },
+            {
+                "name": "ingester-whizard-local-auto-1-operated"
+            },
+            {
+                "name": "ingester-whizard-local-auto-1-operated"
+            },
+            {
+                "name": "ingester-whizard-operated",
+                "assert": true,
+                "level": "danger"
+            },
+            {
+                "name": "kube-state-metrics"
+            },
+            {
+                "name": "node-exporter"
+            },
+            {
+                "name": "node-exporter"
+            },
+            {
+                "name": "node-exporter"
+            },
+            {
+                "name": "node-exporter"
+            },
+            {
+                "name": "node-exporter"
+            },
+            {
+                "name": "node-exporter"
+            },
+            {
+                "name": "node-exporter"
+            },
+            {
+                "name": "notification-adapter"
+            },
+            {
+                "name": "notification-manager-controller-metrics"
+            },
+            {
+                "name": "notification-manager-svc"
+            },
+            {
+                "name": "notification-manager-svc"
+            },
+            {
+                "name": "notification-manager-webhook"
+            },
+            {
+                "name": "prometheus-k8s"
+            },
+            {
+                "name": "prometheus-k8s"
+            },
+            {
+                "name": "prometheus-operated"
+            },
+            {
+                "name": "prometheus-operated"
+            },
+            {
+                "name": "prometheus-operator"
+            },
+            {
+                "name": "query-frontend-whizard-operated"
+            },
+            {
+                "name": "query-frontend-whizard-operated"
+            },
+            {
+                "name": "query-whizard-operated"
+            },
+            {
+                "name": "query-whizard-operated"
+            },
+            {
+                "name": "router-whizard-operated"
+            },
+            {
+                "name": "router-whizard-operated"
+            },
+            {
+                "name": "ruler-chinamoblecloud-0-operated"
+            },
+            {
+                "name": "ruler-host-0-operated"
+            },
+            {
+                "name": "ruler-poc-test-0-operated"
+            },
+            {
+                "name": "ruler-whizard-0-operated"
+            },
+            {
+                "name": "ruler-whizard-0-operated"
+            },
+            {
+                "name": "thanos-ruler-kubesphere"
+            },
+            {
+                "name": "thanos-ruler-kubesphere"
+            },
+            {
+                "name": "thanos-ruler-operated"
+            },
+            {
+                "name": "thanos-ruler-operated"
+            },
+            {
+                "name": "whizard-agent-proxy"
+            },
+            {
+                "name": "coredns"
+            },
+            {
+                "name": "coredns"
+            },
+            {
+                "name": "kube-controller-manager-svc"
+            },
+            {
+                "name": "kube-controller-manager-svc"
+            },
+            {
+                "name": "kube-controller-manager-svc"
+            },
+            {
+                "name": "kube-scheduler-svc"
+            },
+            {
+                "name": "kube-scheduler-svc"
+            },
+            {
+                "name": "kube-scheduler-svc"
+            },
+            {
+                "name": "metrics-server"
+            }
+        ],
+        "serviceConnectResult": [
+            {
+                "name": "kubernetes",
+                "namespace": "default",
+                "endpoint": "kubernetes.default.svc.cluster.local:443"
+            },
+            {
+                "name": "fluid-apiserver-svc",
+                "namespace": "fluid-system",
+                "endpoint": "fluid-apiserver-svc.fluid-system.svc.cluster.local:8080"
+            },
+            {
+                "name": "fluid-pod-admission-webhook",
+                "namespace": "fluid-system",
+                "endpoint": "fluid-pod-admission-webhook.fluid-system.svc.cluster.local:9443"
+            },
+            {
+                "name": "keda-operator-metrics-apiserver",
+                "namespace": "keda",
+                "endpoint": "keda-operator-metrics-apiserver.keda.svc.cluster.local:443"
+            },
+            {
+                "name": "kruise-apiserver-svc",
+                "namespace": "kruise-system",
+                "endpoint": "kruise-apiserver-svc.kruise-system.svc.cluster.local:8080"
+            },
+            {
+                "name": "kruise-webhook-service",
+                "namespace": "kruise-system",
+                "endpoint": "kruise-webhook-service.kruise-system.svc.cluster.local:443"
+            },
+            {
+                "name": "kubefed-admission-webhook",
+                "namespace": "kube-federation-system",
+                "endpoint": "kubefed-admission-webhook.kube-federation-system.svc.cluster.local:443"
+            },
+            {
+                "name": "kubefed-controller-manager-metrics-service",
+                "namespace": "kube-federation-system",
+                "endpoint": "kubefed-controller-manager-metrics-service.kube-federation-system.svc.cluster.local:9090"
+            },
+            {
+                "name": "coredns",
+                "namespace": "kube-system",
+                "endpoint": "coredns.kube-system.svc.cluster.local:53"
+            },
+            {
+                "name": "metrics-server",
+                "namespace": "kube-system",
+                "endpoint": "metrics-server.kube-system.svc.cluster.local:443"
+            },
+            {
+                "name": "kubeeye-apiserver",
+                "namespace": "kubeeye-system",
+                "endpoint": "kubeeye-apiserver.kubeeye-system.svc.cluster.local:9090"
+            },
+            {
+                "name": "kubeeye-controller-manager-metrics-service",
+                "namespace": "kubeeye-system",
+                "endpoint": "kubeeye-controller-manager-metrics-service.kubeeye-system.svc.cluster.local:8443"
+            },
+            {
+                "name": "apiservice",
+                "namespace": "kubesphere-autoscaling-system",
+                "endpoint": "apiservice.kubesphere-autoscaling-system.svc.cluster.local:9090"
+            },
+            {
+                "name": "chaos-dashboard",
+                "namespace": "kubesphere-chaosmesh-system",
+                "endpoint": "chaos-dashboard.kubesphere-chaosmesh-system.svc.cluster.local:2333"
+            },
+            {
+                "name": "chaos-mesh-controller-manager",
+                "namespace": "kubesphere-chaosmesh-system",
+                "endpoint": "chaos-mesh-controller-manager.kubesphere-chaosmesh-system.svc.cluster.local:443"
+            },
+            {
+                "name": "chaos-mesh-dns-server",
+                "namespace": "kubesphere-chaosmesh-system",
+                "endpoint": "chaos-mesh-dns-server.kubesphere-chaosmesh-system.svc.cluster.local:53"
+            },
+            {
+                "name": "default-http-backend",
+                "namespace": "kubesphere-controls-system",
+                "endpoint": "default-http-backend.kubesphere-controls-system.svc.cluster.local:80"
+            },
+            {
+                "name": "kubesphere-router-daemon1",
+                "namespace": "kubesphere-controls-system",
+                "endpoint": "kubesphere-router-daemon1.kubesphere-controls-system.svc.cluster.local:80"
+            },
+            {
+                "name": "kubesphere-router-daemon1-metrics",
+                "namespace": "kubesphere-controls-system",
+                "endpoint": "kubesphere-router-daemon1-metrics.kubesphere-controls-system.svc.cluster.local:10254"
+            },
+            {
+                "name": "kubesphere-router-daemon2",
+                "namespace": "kubesphere-controls-system",
+                "endpoint": "kubesphere-router-daemon2.kubesphere-controls-system.svc.cluster.local:80"
+            },
+            {
+                "name": "kubesphere-router-daemon2-metrics",
+                "namespace": "kubesphere-controls-system",
+                "endpoint": "kubesphere-router-daemon2-metrics.kubesphere-controls-system.svc.cluster.local:10254"
+            },
+            {
+                "name": "kubesphere-router-daemon3",
+                "assert": true,
+                "level": "warning",
+                "namespace": "kubesphere-controls-system",
+                "endpoint": "kubesphere-router-daemon3.kubesphere-controls-system.svc.cluster.local:80"
+            },
+            {
+                "name": "kubesphere-router-daemon3-metrics",
+                "assert": true,
+                "level": "warning",
+                "namespace": "kubesphere-controls-system",
+                "endpoint": "kubesphere-router-daemon3-metrics.kubesphere-controls-system.svc.cluster.local:10254"
+            },
+            {
+                "name": "kubesphere-router-daemon4",
+                "namespace": "kubesphere-controls-system",
+                "endpoint": "kubesphere-router-daemon4.kubesphere-controls-system.svc.cluster.local:80"
+            },
+            {
+                "name": "kubesphere-router-daemon4-metrics",
+                "namespace": "kubesphere-controls-system",
+                "endpoint": "kubesphere-router-daemon4-metrics.kubesphere-controls-system.svc.cluster.local:10254"
+            },
+            {
+                "name": "elasticsearch-logging-data",
+                "namespace": "kubesphere-logging-system",
+                "endpoint": "elasticsearch-logging-data.kubesphere-logging-system.svc.cluster.local:9200"
+            },
+            {
+                "name": "ks-events-admission",
+                "namespace": "kubesphere-logging-system",
+                "endpoint": "ks-events-admission.kubesphere-logging-system.svc.cluster.local:443"
+            },
+            {
+                "name": "ks-vector",
+                "namespace": "kubesphere-logging-system",
+                "endpoint": "ks-vector.kubesphere-logging-system.svc.cluster.local:8686"
+            },
+            {
+                "name": "kube-auditing-webhook-svc",
+                "namespace": "kubesphere-logging-system",
+                "endpoint": "kube-auditing-webhook-svc.kubesphere-logging-system.svc.cluster.local:6443"
+            },
+            {
+                "name": "logsidecar-injector-admission",
+                "namespace": "kubesphere-logging-system",
+                "endpoint": "logsidecar-injector-admission.kubesphere-logging-system.svc.cluster.local:443"
+            },
+            {
+                "name": "alertmanager-main",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "alertmanager-main.kubesphere-monitoring-system.svc.cluster.local:9093"
+            },
+            {
+                "name": "gateway-whizard-operated",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "gateway-whizard-operated.kubesphere-monitoring-system.svc.cluster.local:9090"
+            },
+            {
+                "name": "notification-adapter",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "notification-adapter.kubesphere-monitoring-system.svc.cluster.local:8080"
+            },
+            {
+                "name": "notification-manager-controller-metrics",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "notification-manager-controller-metrics.kubesphere-monitoring-system.svc.cluster.local:8443"
+            },
+            {
+                "name": "notification-manager-svc",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "notification-manager-svc.kubesphere-monitoring-system.svc.cluster.local:19093"
+            },
+            {
+                "name": "notification-manager-webhook",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "notification-manager-webhook.kubesphere-monitoring-system.svc.cluster.local:443"
+            },
+            {
+                "name": "prometheus-k8s",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "prometheus-k8s.kubesphere-monitoring-system.svc.cluster.local:9090"
+            },
+            {
+                "name": "query-frontend-whizard-operated",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "query-frontend-whizard-operated.kubesphere-monitoring-system.svc.cluster.local:10902"
+            },
+            {
+                "name": "query-whizard-operated",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "query-whizard-operated.kubesphere-monitoring-system.svc.cluster.local:10901"
+            },
+            {
+                "name": "router-whizard-operated",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "router-whizard-operated.kubesphere-monitoring-system.svc.cluster.local:10901"
+            },
+            {
+                "name": "ruler-chinamoblecloud-0-operated",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "ruler-chinamoblecloud-0-operated.kubesphere-monitoring-system.svc.cluster.local:10901"
+            },
+            {
+                "name": "ruler-host-0-operated",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "ruler-host-0-operated.kubesphere-monitoring-system.svc.cluster.local:10901"
+            },
+            {
+                "name": "ruler-poc-test-0-operated",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "ruler-poc-test-0-operated.kubesphere-monitoring-system.svc.cluster.local:10901"
+            },
+            {
+                "name": "ruler-whizard-0-operated",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "ruler-whizard-0-operated.kubesphere-monitoring-system.svc.cluster.local:10901"
+            },
+            {
+                "name": "thanos-ruler-kubesphere",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "thanos-ruler-kubesphere.kubesphere-monitoring-system.svc.cluster.local:10902"
+            },
+            {
+                "name": "whizard-agent-proxy",
+                "namespace": "kubesphere-monitoring-system",
+                "endpoint": "whizard-agent-proxy.kubesphere-monitoring-system.svc.cluster.local:9090"
+            },
+            {
+                "name": "craned",
+                "namespace": "kubesphere-scheduling-system",
+                "endpoint": "craned.kubesphere-scheduling-system.svc.cluster.local:443"
+            },
+            {
+                "name": "kubesphere-scheduling",
+                "namespace": "kubesphere-scheduling-system",
+                "endpoint": "kubesphere-scheduling.kubesphere-scheduling-system.svc.cluster.local:9090"
+            },
+            {
+                "name": "nacos",
+                "namespace": "kubesphere-spring-cloud-system",
+                "endpoint": "nacos.kubesphere-spring-cloud-system.svc.cluster.local:8848"
+            },
+            {
+                "name": "spring-cloud-controller-manager",
+                "namespace": "kubesphere-spring-cloud-system",
+                "endpoint": "spring-cloud-controller-manager.kubesphere-spring-cloud-system.svc.cluster.local:443"
+            },
+            {
+                "name": "ks-apiserver",
+                "namespace": "kubesphere-system",
+                "endpoint": "ks-apiserver.kubesphere-system.svc.cluster.local:80"
+            },
+            {
+                "name": "ks-apiservernodeport",
+                "namespace": "kubesphere-system",
+                "endpoint": "ks-apiservernodeport.kubesphere-system.svc.cluster.local:80"
+            },
+            {
+                "name": "ks-console",
+                "namespace": "kubesphere-system",
+                "endpoint": "ks-console.kubesphere-system.svc.cluster.local:80"
+            },
+            {
+                "name": "ks-controller-manager",
+                "namespace": "kubesphere-system",
+                "endpoint": "ks-controller-manager.kubesphere-system.svc.cluster.local:443"
+            },
+            {
+                "name": "minio",
+                "namespace": "kubesphere-system",
+                "endpoint": "minio.kubesphere-system.svc.cluster.local:9000"
+            },
+            {
+                "name": "redis",
+                "namespace": "kubesphere-system",
+                "endpoint": "redis.kubesphere-system.svc.cluster.local:6379"
+            },
+            {
+                "name": "tower",
+                "namespace": "kubesphere-system",
+                "endpoint": "tower.kubesphere-system.svc.cluster.local:8080"
+            },
+            {
+                "name": "mysql",
+                "assert": true,
+                "level": "warning",
+                "namespace": "ruoyi-mid",
+                "endpoint": "mysql.ruoyi-mid.svc.cluster.local:3306"
+            },
+            {
+                "name": "mysql-svc",
+                "assert": true,
+                "level": "warning",
+                "namespace": "ruoyi-mid",
+                "endpoint": "mysql-svc.ruoyi-mid.svc.cluster.local:3306"
+            },
+            {
+                "name": "nacos",
+                "assert": true,
+                "level": "warning",
+                "namespace": "ruoyi-mid",
+                "endpoint": "nacos.ruoyi-mid.svc.cluster.local:8848"
+            },
+            {
+                "name": "nacos-svc",
+                "assert": true,
+                "level": "warning",
+                "namespace": "ruoyi-mid",
+                "endpoint": "nacos-svc.ruoyi-mid.svc.cluster.local:8848"
+            },
+            {
+                "name": "redis",
+                "assert": true,
+                "level": "warning",
+                "namespace": "ruoyi-mid",
+                "endpoint": "redis.ruoyi-mid.svc.cluster.local:6379"
+            },
+            {
+                "name": "ry-auth",
+                "assert": true,
+                "level": "warning",
+                "namespace": "ruoyi",
+                "endpoint": "ry-auth.ruoyi.svc.cluster.local:8080"
+            },
+            {
+                "name": "ry-file",
+                "assert": true,
+                "level": "warning",
+                "namespace": "ruoyi",
+                "endpoint": "ry-file.ruoyi.svc.cluster.local:8080"
+            },
+            {
+                "name": "ry-gateway",
+                "assert": true,
+                "level": "warning",
+                "namespace": "ruoyi",
+                "endpoint": "ry-gateway.ruoyi.svc.cluster.local:8080"
+            },
+            {
+                "name": "ry-system",
+                "assert": true,
+                "level": "warning",
+                "namespace": "ruoyi",
+                "endpoint": "ry-system.ruoyi.svc.cluster.local:8080"
+            },
+            {
+                "name": "ry-ui",
+                "namespace": "ruoyi",
+                "endpoint": "ry-ui.ruoyi.svc.cluster.local:80"
+            },
+            {
+                "name": "ry-ui-svc",
+                "namespace": "ruoyi",
+                "endpoint": "ry-ui-svc.ruoyi.svc.cluster.local:80"
+            },
+            {
+                "name": "affinity-clusterip-timeout",
+                "namespace": "services-5722",
+                "endpoint": "affinity-clusterip-timeout.services-5722.svc.cluster.local:80"
+            },
+            {
+                "name": "nginx",
+                "namespace": "test-hp-ns",
+                "endpoint": "nginx.test-hp-ns.svc.cluster.local:80"
+            },
+            {
+                "name": "kubesphere-router-workspace-daemon-4",
+                "assert": true,
+                "level": "warning",
+                "namespace": "test1",
+                "endpoint": "kubesphere-router-workspace-daemon-4.test1.svc.cluster.local:80"
+            },
+            {
+                "name": "kubesphere-router-workspace-daemon-4-metrics",
+                "assert": true,
+                "level": "warning",
+                "namespace": "test1",
+                "endpoint": "kubesphere-router-workspace-daemon-4-metrics.test1.svc.cluster.local:10254"
+            },
+            {
+                "name": "details",
+                "assert": true,
+                "level": "warning",
+                "namespace": "test2",
+                "endpoint": "details.test2.svc.cluster.local:9080"
+            },
+            {
+                "name": "productpage",
+                "assert": true,
+                "level": "warning",
+                "namespace": "test2",
+                "endpoint": "productpage.test2.svc.cluster.local:9080"
+            },
+            {
+                "name": "ratings",
+                "assert": true,
+                "level": "warning",
+                "namespace": "test2",
+                "endpoint": "ratings.test2.svc.cluster.local:9080"
+            },
+            {
+                "name": "reviews",
+                "assert": true,
+                "level": "warning",
+                "namespace": "test2",
+                "endpoint": "reviews.test2.svc.cluster.local:9080"
+            }
+        ]
+    },
+    "status": {}
+}
