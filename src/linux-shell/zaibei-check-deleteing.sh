@@ -1,15 +1,17 @@
 #!/bin/bash  
   
-resources=("Group"  
-            "GlobalRole"  
-            "GlobalRoleBinding"  
-            "workspaces.tenant.kubesphere.io"  
-            "workspacetemplate"  
-            "federatedworkspaces.types.kubefed.io"  
-            "WorkspaceRole"  
-            "WorkspaceRoleBinding"  
-            "federatedusers.types.kubefed.io"  
-            "users.iam.kubesphere.io")  
+resources=("
+    Group"  
+    "GlobalRole"  
+    "GlobalRoleBinding"  
+    "workspaces.tenant.kubesphere.io"  
+    "workspacetemplate"  
+    "federatedworkspaces.types.kubefed.io"  
+    "WorkspaceRole"  
+    "WorkspaceRoleBinding"  
+    "federatedusers.types.kubefed.io"  
+    "users.iam.kubesphere.io"
+)  
   
 if [ -n "$1" ] && [ "$1" = "checkDelete" ]; then  
     for resource in "${resources[@]}"  

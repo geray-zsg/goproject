@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e
 ##########################
 # 目录：
 #   ./qy-zhunbei.sh  [参数]   脚本
@@ -8,6 +9,8 @@
 #   ./namespaces        ws和ns解绑备份目录
 ##########################
 
+
+###########################开始：member集群##############################
 # 获取webhook、ws和ns的关系
 Get_webhook_ws_ns() {
     echo "----------> webhook"
@@ -69,15 +72,60 @@ Restore_ws_ns() {
         echo "${CLUSTER_NAME} 集群不存在"
     fi
 }
+###########################结束：member集群##############################
+
+###########################开始：备host集群清理待回收资源##############################
+resources=("
+    Group"  
+    "GlobalRole"  
+    "GlobalRoleBinding"  
+    "workspaces.tenant.kubesphere.io"  
+    "workspacetemplate"  
+    "federatedworkspaces.types.kubefed.io"  
+    "WorkspaceRole"  
+    "WorkspaceRoleBinding"  
+    "federatedusers.types.kubefed.io"  
+    "users.iam.kubesphere.io"
+)
+
+# 检查host集群是否存在待清理的资源
+CheckHostDeleting(){
+    for resource in "${resources[@]}"  
+    do  
+        echo "######################| $resource"
+        kubectl --kubeconfig=${KUBECONFIG_PATH} get $resource -o yaml | grep deletionGracePeriodSeconds
+    done  
+}
+
+# 清理host集群待清理的资源
+HostDeleting() {
+    # 如果存在这个
+    for resource in "${resources[@]}"  
+    do  
+        result=$(kubectl --kubeconfig=${KUBECONFIG_PATH} get $resource -o yaml | grep deletionGracePeriodSeconds)  
+  
+        if [ -n "$result" ]; then  
+            echo "---------> $resource  下存在 正在被标记删除的资源。"  
+            #如果存在则删除
+            kubectl patch  $resource $result --type json -p '[{"op": "replace", "path": "/metadata/finalizers", "value": []}]'
+        else
+            echo "---------> $resource 无被标记回收的资源"
+        fi
+    done  
+}
+
+###########################结束：备host集群清理待回收资源##############################
 
 # 请给定环境变量
 Help() {
     echo "提供参数
-        Get                 获取webhook、workspace和namespace关系
+        get                 获取webhook、workspace和namespace关系
         deleteWebhook       删除集群webhook
-        DeleteWsNS          删除集群workspace和namespace关系
+        ddeleteWsNS         删除集群workspace和namespace关系
         setWebhook          恢复集群webhook
         setWsNs             恢复集群workspace和namespace关系
+        checkHostDel        检查host是否存在别标记回收的资源
+        delHost             清理host是否存在别标记回收的资源
     "
 }
 
@@ -121,23 +169,29 @@ else
         KUBECONFIG_PATH=./members/member_kubeconfig_${CLUSTER_NAME}.yaml
 
         echo "----------------------------------------------> 正在操作的集群是：$CLUSTER_NAME"
-        if [ "$1" = "Get" ]; then
+        if [ "$1" = "get" ]; then
             # 获取webhook以及ws和ns绑定关系
             Get_webhook_ws_ns
         elif [ "$1" = "deleteWebhook" ]; then
             # 备份并删除 webhook 函数
             Remote_backup_and_delete_webhook
-        elif [ "$1" = "DeleteWsNS" ]; then
+        elif [ "$1" = "deleteWsNS" ]; then
 
             echo "--------------------| 解绑ws和ns关系"
             # 调用解绑 workspace 和 namespace 的关系
-            remote_unbind_workspace_namespace
+            Remote_unbind_workspace_namespace
         elif [ "$1" = "setWebhook" ]; then
             # 恢复 webhook
             Restore_webhook
         elif [ "$1" = "setWsNs" ]; then
             # 恢复ws和关系
             Restore_ws_ns
+        elif [ "$1" = "checkHostDel" ]; then
+            # 检查host是否存在别标记回收的资源
+            CheckHostDeleting
+        elif [ "$1" = "delHost" ]; then
+            # 清理host是否存在别标记回收的资源
+            HostDeleting
         fi
     done
 
