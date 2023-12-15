@@ -93,7 +93,7 @@ CheckHostDeleting(){
     for resource in "${resources[@]}"  
     do  
         echo "######################| $resource"
-        kubectl --kubeconfig=${KUBECONFIG_PATH} get $resource -o yaml | grep deletionGracePeriodSeconds
+        kubectl get $resource -o yaml | grep deletionGracePeriodSeconds
     done  
 }
 
@@ -102,7 +102,7 @@ HostDeleting() {
     # 如果存在这个
     for resource in "${resources[@]}"  
     do  
-        result=$(kubectl --kubeconfig=${KUBECONFIG_PATH} get $resource -o yaml | grep deletionGracePeriodSeconds)  
+        result=$(kubectl  get $resource -o yaml | grep deletionGracePeriodSeconds)  
   
         if [ -n "$result" ]; then  
             echo "---------> $resource  下存在 正在被标记删除的资源。"  
@@ -148,6 +148,12 @@ CLUSTER_NAMES=(
 
 if [ -z "$1" ]; then
     Help
+elif [ "$1" = "checkHostDel" ]; then
+    # 检查host是否存在别标记回收的资源
+    CheckHostDeleting
+elif [ "$1" = "delHost" ]; then
+    # 清理host是否存在别标记回收的资源
+    HostDeleting
 else
 
     # 检查目录是否存在  
@@ -186,13 +192,8 @@ else
         elif [ "$1" = "setWsNs" ]; then
             # 恢复ws和关系
             Restore_ws_ns
-        elif [ "$1" = "checkHostDel" ]; then
-            # 检查host是否存在别标记回收的资源
-            CheckHostDeleting
-        elif [ "$1" = "delHost" ]; then
-            # 清理host是否存在别标记回收的资源
-            HostDeleting
+        else
+            Help
         fi
     done
-
 fi
