@@ -21,29 +21,30 @@ Get_webhook_ws_ns() {
 
 # 远程备份并删除 webhook
 Remote_backup_and_delete_webhook() {
+    # webhook名称
     local RESOURCE_NAME="mutating-webhook-ks-cfg"
 
     echo "正在操作：mutating-webhook-ks-cfg"
     # kubectl --kubeconfig=${KUBECONFIG_PATH} get MutatingWebhookConfiguration $RESOURCE_NAME
     if kubectl --kubeconfig=${KUBECONFIG_PATH} get MutatingWebhookConfiguration $RESOURCE_NAME > /dev/null 2>&1 ; then
         echo "资源存在，正在备份..."
-        echo "命令是：kubectl --kubeconfig=${KUBECONFIG_PATH} get MutatingWebhookConfiguration $RESOURCE_NAME -o yaml > ./webhooks/${CLUSTER_NAME}_${RESOURCE_NAME}-bak.yaml"
-        #kubectl --kubeconfig=${KUBECONFIG_PATH} get MutatingWebhookConfiguration $RESOURCE_NAME -o yaml > ./webhooks/${CLUSTER_NAME}_${RESOURCE_NAME}-bak.yaml
+        kubectl --kubeconfig=${KUBECONFIG_PATH} get MutatingWebhookConfiguration $RESOURCE_NAME -o yaml > ./webhooks/${CLUSTER_NAME}_${RESOURCE_NAME}-bak.yaml
 
         echo "备份完成，正在删除资源..."
-        echo "命令是：kubectl --kubeconfig=${KUBECONFIG_PATH} delete -f ./webhooks/${CLUSTER_NAME}_${RESOURCE_NAME}-bak.yaml"
-        #kubectl --kubeconfig=${KUBECONFIG_PATH} delete -f ./webhooks/${CLUSTER_NAME}_${RESOURCE_NAME}-bak.yaml
+        kubectl --kubeconfig=${KUBECONFIG_PATH} delete -f ./webhooks/${CLUSTER_NAME}_${RESOURCE_NAME}-bak.yaml
 
         echo "资源已删除。"
     else
-        echo "资源不存在。"
+        echo "${CLUSTER_NAME} 集群不存在webhook ${RESOURCE_NAME}。"
     fi
 
 }
 
 # 恢复webhook
 Restore_webhook() {
-
+    # webhook名称
+    local RESOURCE_NAME="mutating-webhook-ks-cfg"
+    
     if [ -f "./webhooks/${CLUSTER_NAME}_${RESOURCE_NAME}-bak.yaml" ]; then
         kubectl --kubeconfig=${KUBECONFIG_PATH}  create -f ./webhooks/${CLUSTER_NAME}_${RESOURCE_NAME}-bak.yaml
     else
