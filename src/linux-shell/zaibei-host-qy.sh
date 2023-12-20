@@ -3,8 +3,9 @@
 set -e
 ##########################
 # 目录：
-#   ./qy-zhunbei.sh  [参数]   脚本
+#   ./zaibei-host-qy.sh  [参数]   脚本
 #   ./members           kubeconfig集群配置目录
+#       kubeconfig命名格式：member_kubeconfig_<Member-Name>.yaml
 #   ./webhooks          webhook备份目录
 #   ./namespaces        ws和ns解绑备份目录
 ##########################
@@ -44,7 +45,7 @@ Remote_backup_and_delete_webhook() {
 Restore_webhook() {
     # webhook名称
     local RESOURCE_NAME="mutating-webhook-ks-cfg"
-    
+
     if [ -f "./webhooks/${CLUSTER_NAME}_${RESOURCE_NAME}-bak.yaml" ]; then
         kubectl --kubeconfig=${KUBECONFIG_PATH}  create -f ./webhooks/${CLUSTER_NAME}_${RESOURCE_NAME}-bak.yaml
     else
@@ -139,6 +140,12 @@ Help() {
         checkKubeFed        检查host集群kubefed服务
         stopKubeFed         停止host集群kubefed服务
         startKubeFed        启动host集群kubefed服务
+    "
+    echo "
+    操作前确认需要操作的member集群，修改对应的CLUSTER_NAMES数组
+    检查对应的members目录的kubeconfig文件
+        kubeconfig命名格式：member_kubeconfig_<Member-Name>.yaml
+        脚本读取时：./members/member_kubeconfig_\${CLUSTER_NAME}.yaml
     "
 }
 
