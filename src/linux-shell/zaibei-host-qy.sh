@@ -86,14 +86,14 @@ Restore_ws_ns() {
 
 ###########################开始：备host集群清理待回收资源##############################
 resources=(
-    "Group"  
-    "GlobalRole"  
-    "GlobalRoleBinding"  
+    "groups.iam.kubesphere.io"      # Group
+    "globalroles.iam.kubesphere.io"                    # globalroles
+    "groupbindings.iam.kubesphere.io"  
     "workspaces.tenant.kubesphere.io"  
-    "workspacetemplate"  
+    "workspacetemplates.tenant.kubesphere.io"  
     "federatedworkspaces.types.kubefed.io"  
-    "WorkspaceRole"  
-    "WorkspaceRoleBinding"  
+    "workspaceroles.iam.kubesphere.io"  
+    "workspacerolebindings.iam.kubesphere.io"  
     "federatedusers.types.kubefed.io"  
     "users.iam.kubesphere.io"
 )
